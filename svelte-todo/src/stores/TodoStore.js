@@ -5,6 +5,7 @@ let todos = []
 
 todos = JSON.parse(localStorage.getItem('todos')) || todos;
 
+// Create a Writable store that allows both updating and reading by subscription.
 let todoStore = writable(todos);
 
 // update localStorage values whenever the store values change
